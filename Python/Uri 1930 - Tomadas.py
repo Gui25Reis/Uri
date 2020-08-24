@@ -1,0 +1,1 @@
+print(sum([int(x) for x in input().split() ])-3)    # Pede as entradas, soma elas e tira 3 (3 tomadas forma usadas)

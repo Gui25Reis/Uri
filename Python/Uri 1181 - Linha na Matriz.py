@@ -1,0 +1,3 @@
+lin, op = int(input()), input()                                                                     # Pede a linha e a operação
+matrix = [ [float(input()) for y in range(12)] for x in range (12)]                                 # Pede os valores da matrix
+print('{:.1f}' .format(sum(matrix[lin])) if op == 'S' else '{:.1f}' .format(sum(matrix[lin]/12)) )  # Mostra o resultado de acordo xom a operação pedida

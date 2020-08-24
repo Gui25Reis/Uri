@@ -1,0 +1,1 @@
+print(max(map(int,input().split())))    # mostra o máx da string (q muda pra inteiro)

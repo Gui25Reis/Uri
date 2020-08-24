@@ -1,0 +1,1 @@
+print('{:.2f}'.format(sum([1/x for x in range(1, 101)])))   # Cria uma lista com os números e soma ela
