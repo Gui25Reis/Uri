@@ -7,7 +7,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "Uri 1019 - Conversão de Tempo.cpp"
+                "Uri 1021 - Notas e Moedas.cpp"
             ],
             "group": {
                 "kind": "build",

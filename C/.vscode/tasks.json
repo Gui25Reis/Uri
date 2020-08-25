@@ -7,7 +7,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "Uri 1019 - Conversão de Tempo.c"
+                "Uri 1024 - Criptografia.c"
             ],
             "group": {
                 "kind": "build",
