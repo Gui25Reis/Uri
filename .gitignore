@@ -1,11 +1,8 @@
 ## Tirando a pasta edição.
-_outros/_edicao/*
+Zoutros/_edicao/*
 
 ## Tirando a pasta de configraçõa do .vscode 
-exercicios/C/.vscode/*
-exercicios/C++/.vscode/*
-exercicios/Python/.vscode/*
-exercicios/SQL/.vscode/*
+*.vscode
 
 ## removendo todos os executávies
 *.exe
