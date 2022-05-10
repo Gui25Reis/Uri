@@ -1,5 +1,5 @@
 <p>
-    <a href="https://www.urionlinejudge.com.br"><img align="center" style="margin: 0px auto;" src="https://raw.github.com/Gui25Reis/Uri/master/Zoutros/logo.png"/></a>
+    <a href="https://www.urionlinejudge.com.br"><img align="center" style="margin: 0px auto;" src="https://github.com/Gui25Reis/Uri/blob/master/_outros/logo.png"/></a>
 </p>
 <p align="center">
     Meu <a href="https://www.urionlinejudge.com.br/judge/pt/profile/318386">perfil</a> - TOP 10 do <a href="https://www.urionlinejudge.com.br/judge/pt/users/university/upm">Mackenzie</a>
