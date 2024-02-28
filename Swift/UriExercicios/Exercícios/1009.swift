@@ -12,7 +12,7 @@
  Imprima o total que o funcionário deverá receber, conforme exemplo fornecido.
  
  
- link: https://judge.beecrowd.com/pt/problems/view/1008
+ link: https://judge.beecrowd.com/pt/problems/view/1009
  */
 
 

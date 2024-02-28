@@ -36,7 +36,7 @@ final class Ex1007Tests: XCTestCase {
     
     
     /* Testes */
-    func test_1007_01() {
+    func test_01() {
         // Prepare
         let expected = "DIFERENCA = -26"
         inputs = ["5", "6", "7", "8"]
@@ -45,7 +45,7 @@ final class Ex1007Tests: XCTestCase {
         validate(expected: expected)
     }
     
-    func test_1007_02() {
+    func test_02() {
         // Prepare
         let expected = "DIFERENCA = -56"
         inputs = ["0", "0", "7", "8"]
@@ -54,7 +54,7 @@ final class Ex1007Tests: XCTestCase {
         validate(expected: expected)
     }
     
-    func test_1007_03() {
+    func test_03() {
         // Prepare
         let expected = "DIFERENCA = 86"
         inputs = ["5", "6", "-7", "8"]

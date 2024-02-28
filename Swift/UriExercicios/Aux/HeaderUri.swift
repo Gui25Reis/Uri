@@ -25,6 +25,35 @@ class DefaultInputProvider: InputProvider {
         Swift.print(data)
     }
 }
+ 
+protocol NumberFormatter {
+    
+    func precision(of: Int) -> String
+}
 
+extension Double: NumberFormatter {
+    
+    func precision(of precision: Int) -> String {
+        String(format: "%.\(precision)f", self)
+    }
+}
+
+
+extension Float: NumberFormatter {
+    
+    func precision(of precision: Int) -> String {
+        String(format: "%.\(precision)f", self)
+    }
+}
+
+
+extension String {
+    
+    var double: Double { Double(self)! }
+    
+    var float: Float { Float(self)! }
+    
+    var int: Int { Int(self)! }
+}
 
  */

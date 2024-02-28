@@ -12,7 +12,7 @@
  Imprima a mensagem DIFERENCA com todas as letras maiúsculas, conforme exemplo abaixo, com um espaço em branco antes e depois da igualdade.
  
  
- link: https://judge.beecrowd.com/pt/problems/view/1008
+ link: https://judge.beecrowd.com/pt/problems/view/1007
  */
 
 

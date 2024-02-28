@@ -36,7 +36,7 @@ final class Ex1008Tests: XCTestCase {
     
     
     /* Testes */
-    func test_1008_01() {
+    func test_01() {
         // Prepare
         let expected = "NUMBER = 25\nSALARY = U$ 550.00"
         inputs = ["25", "100", "5.50"]
@@ -45,7 +45,7 @@ final class Ex1008Tests: XCTestCase {
         validate(expected: expected)
     }
     
-    func test_1008_02() {
+    func test_02() {
         // Prepare
         let expected = "NUMBER = 1\nSALARY = U$ 4100.00"
         inputs = ["1", "200", "20.50"]
@@ -54,7 +54,7 @@ final class Ex1008Tests: XCTestCase {
         validate(expected: expected)
     }
     
-    func test_1008_03() {
+    func test_03() {
         // Prepare
         let expected = "NUMBER = 6\nSALARY = U$ 2254.75"
         inputs = ["6", "145", "15.55"]

@@ -1,17 +1,21 @@
 //
-//  Gui Reis  -  gui.sreis25@gmail.com - 23/02/24.
+//  Gui Reis  -  gui.sreis25@gmail.com - 28/02/24
 //
 
 import XCTest
 @testable import UriFramework
 
 
-final class Ex1006Tests: XCTestCase {
+final class Ex1014Tests: XCTestCase {
     
     var inputs: [String]! = .init()
     
     
     /* Ciclo de Vida */
+    override func setUp() {
+        super.setUp()
+    }
+    
     override func tearDown() {
         inputs = nil
         super.tearDown()
@@ -24,7 +28,7 @@ final class Ex1006Tests: XCTestCase {
         let provider = MockInputProvider(inputs: inputs)
         
         // Action
-        ex1006(input: provider)
+        ex1014(input: provider)
         
         // Validation
         XCTAssertEqual(expected, provider.dataPrinted)
@@ -34,8 +38,8 @@ final class Ex1006Tests: XCTestCase {
     /* Testes */
     func test_01() {
         // Prepare
-        let expected = "MEDIA = 6.3"
-        inputs = ["5.0", "6.0", "7.0"]
+        let expected = "14.286 km/l"
+        inputs = ["500", "35.0"]
         
         // Action
         validate(expected: expected)
@@ -43,8 +47,8 @@ final class Ex1006Tests: XCTestCase {
     
     func test_02() {
         // Prepare
-        let expected = "MEDIA = 9.0"
-        inputs = ["5.0", "10.0", "10.0"]
+        let expected = "18.119 km/l"
+        inputs = ["2254", "124.4"]
         
         // Action
         validate(expected: expected)
@@ -52,8 +56,8 @@ final class Ex1006Tests: XCTestCase {
     
     func test_03() {
         // Prepare
-        let expected = "MEDIA = 7.5"
-        inputs = ["10.0", "10.0", "5.0"]
+        let expected = "9.802 km/l"
+        inputs = ["4554", "464.6"]
         
         // Action
         validate(expected: expected)
