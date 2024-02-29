@@ -22,8 +22,8 @@
 import Foundation
 
 
-func ex1002() {
-    let userInput = readLine()!
+func ex1002(input: InputProvider = DefaultInputProvider()) {
+    let userInput = input.readLine()!
     let radius = Double(userInput)!
 
     let pi = 3.14159
@@ -31,5 +31,5 @@ func ex1002() {
     
     let resultFormatted = String(format: "%.4f", area)
     
-    print("A=\(resultFormatted)")
+    input.print("A=\(resultFormatted)")
 }

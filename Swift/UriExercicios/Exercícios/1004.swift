@@ -21,14 +21,14 @@
 import Foundation
 
 
-func ex1004() {
-    let userInput01 = readLine()!
+func ex1004(input: InputProvider = DefaultInputProvider()) {
+    let userInput01 = input.readLine()!
     let input01 = Int(userInput01)!
 
-    let userInput02 = readLine()!
+    let userInput02 = input.readLine()!
     let input02 = Int(userInput02)!
 
     let result = input01 * input02
 
-    print("PROD = \(result)")
+    input.print("PROD = \(result)")
 }

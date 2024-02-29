@@ -21,11 +21,11 @@
 import Foundation
 
 
-func ex1005() {
-    let userInput01 = readLine()!
+func ex1005(input: InputProvider = DefaultInputProvider()) {
+    let userInput01 = input.readLine()!
     let grade01 = Double(userInput01)!
 
-    let userInput02 = readLine()!
+    let userInput02 = input.readLine()!
     let grade02 = Double(userInput02)!
     
     
@@ -39,5 +39,5 @@ func ex1005() {
     let result = sum / totalWeight
     
     let resultFormatted = String(format: "%.5f", result)
-    print("MEDIA = \(resultFormatted)")
+    input.print("MEDIA = \(resultFormatted)")
 }

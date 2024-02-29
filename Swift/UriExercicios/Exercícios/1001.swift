@@ -18,14 +18,14 @@
 
 // MARK: - Exercício
 
-func ex1001() {
-    let userInputA = readLine()!
+func ex1001(input: InputProvider = DefaultInputProvider()) {
+    let userInputA = input.readLine()!
     let A = Int(userInputA)!
 
-    let userInputB = readLine()!
+    let userInputB = input.readLine()!
     let B = Int(userInputB)!
 
     let X = A + B
 
-    print("X = \(X)")
+    input.print("X = \(X)")
 }

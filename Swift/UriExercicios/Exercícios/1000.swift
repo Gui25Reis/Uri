@@ -19,6 +19,6 @@
 
 // MARK: - Exercício
 
-func ex1000() {
-    print("Hello World!")
+func ex1000(input: InputProvider = DefaultInputProvider()) {
+    input.print("Hello World!")
 }

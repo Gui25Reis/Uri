@@ -10,6 +10,8 @@ protocol NumberFormatter {
     func precision(of: Int) -> String
 }
 
+
+// MARK: - Double + NumberFormatter
 extension Double: NumberFormatter {
     
     func precision(of precision: Int) -> String {
@@ -18,6 +20,7 @@ extension Double: NumberFormatter {
 }
 
 
+// MARK: - Float + NumberFormatter
 extension Float: NumberFormatter {
     
     func precision(of precision: Int) -> String {

@@ -54,6 +54,8 @@ func ex1013(input: InputProvider = DefaultInputProvider()) {
 /*
  Implementação O(3n)
  */
+
+/*
 func ex1013_02(input: InputProvider = DefaultInputProvider()) {
     let userInput = input.readLine()!
 
@@ -65,3 +67,4 @@ func ex1013_02(input: InputProvider = DefaultInputProvider()) {
     let response = "\(biggerNumber) eh o maior"
     input.print(response)
 }
+ */

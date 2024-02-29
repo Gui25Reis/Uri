@@ -21,14 +21,14 @@
 import Foundation
 
 
-func ex1003() {
-    let userInputA = readLine()!
+func ex1003(input: InputProvider = DefaultInputProvider()) {
+    let userInputA = input.readLine()!
     let A = Int(userInputA)!
 
-    let userInputB = readLine()!
+    let userInputB = input.readLine()!
     let B = Int(userInputB)!
 
     let SOMA = A + B
 
-    print("SOMA = \(SOMA)")
+    input.print("SOMA = \(SOMA)")
 }
