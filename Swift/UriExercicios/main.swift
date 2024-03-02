@@ -7,7 +7,7 @@
  */
 
 print("Iniciando exercicio:")
-for _ in 0..<3 {
-    // ex1006()
+for _ in 0..<10 {
+    ex1021()
     print()
 }

@@ -54,6 +54,10 @@ extension String {
     var float: Float { Float(self)! }
     
     var int: Int { Int(self)! }
+    
+    func split(by separator: CharacterSet = .whitespaces) -> [String] {
+        components(separatedBy: separator)
+    }
 }
  
  
