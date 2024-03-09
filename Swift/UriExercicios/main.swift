@@ -3,11 +3,15 @@
 //
 
 /*
-    Os exercícios estão sendo validados pelos testes ubitários.
+    Os exercícios estão sendo validados pelos testes unitários.
  */
 
-print("Iniciando exercicio:")
-for _ in 0..<10 {
-    ex1021()
-    print()
-}
+print("Iniciando exercício")
+
+//ex1024()
+
+var number: UInt32 = 4
+//print("Soma: \(number ^= UInt32(6))")
+
+print(number)
+

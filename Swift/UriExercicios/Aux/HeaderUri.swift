@@ -26,25 +26,88 @@ class DefaultInputProvider: InputProvider {
     }
 }
  
-protocol NumberFormatter {
-    
-    func precision(of: Int) -> String
-}
-
-extension Double: NumberFormatter {
-    
-    func precision(of precision: Int) -> String {
-        String(format: "%.\(precision)f", self)
-    }
-}
+ protocol NumberFormatter {
+     
+     var isInt: Bool { get }
+     
+     func precision(of: Int, type: NSDecimalNumber.RoundingMode) -> String
+ }
 
 
-extension Float: NumberFormatter {
-    
-    func precision(of precision: Int) -> String {
-        String(format: "%.\(precision)f", self)
-    }
-}
+ // MARK: - Double + NumberFormatter
+ extension Double: NumberFormatter {
+     
+     var isInt: Bool {
+         let number = "\(self)"
+         let numberParts = number.split(by: .punctuationCharacters)
+         
+         let decimal = numberParts[1]
+         
+         let value = decimal.firstIndex(where: { $0 != "0" } )
+         
+         let isInt = value == nil
+         return isInt
+     }
+     
+     func precision(of precision: Int, type: NSDecimalNumber.RoundingMode = .up) -> String {
+         let format = "%.\(precision)f"
+         let formatted = String(format: format, self)
+         
+         if isInt { return formatted }
+         
+         let decimal = NSDecimalNumber(value: self)
+
+         let handler = NSDecimalNumberHandler(
+             roundingMode: type,
+             scale: Int16(precision),
+             raiseOnExactness: true,
+             raiseOnOverflow: false,
+             raiseOnUnderflow: true,
+             raiseOnDivideByZero: true
+         )
+
+         let rounded = decimal.rounding(accordingToBehavior: handler)
+         return "\(rounded)"
+     }
+ }
+
+
+ // MARK: - Float + NumberFormatter
+ extension Float: NumberFormatter {
+     
+     var isInt: Bool {
+         let number = "\(self)"
+         let numberParts = number.split(by: .punctuationCharacters)
+         
+         let decimal = numberParts[1]
+         
+         let value = decimal.firstIndex(where: { $0 != "0" } )
+         
+         let isInt = value == nil
+         return isInt
+     }
+     
+     func precision(of precision: Int, type: NSDecimalNumber.RoundingMode = .up) -> String {
+         let format = "%.\(precision)f"
+         let formatted = String(format: format, self)
+         
+         if isInt { return formatted }
+         
+         let decimal = NSDecimalNumber(value: self)
+
+         let handler = NSDecimalNumberHandler(
+             roundingMode: type,
+             scale: Int16(precision),
+             raiseOnExactness: true,
+             raiseOnOverflow: false,
+             raiseOnUnderflow: true,
+             raiseOnDivideByZero: true
+         )
+
+         let rounded = decimal.rounding(accordingToBehavior: handler)
+         return "\(rounded)"
+     }
+ }
 
 
 extension String {
